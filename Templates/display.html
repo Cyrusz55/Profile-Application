@@ -1,0 +1,72 @@
+
+<html lang="en">
+<head>
+    <title>display</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body bgcolor="#e6ffee">
+<div class="one">
+    <div class="two">
+        <h1>Side Bar</h1>
+        <ul>
+            <li><a href="{{url_for('index')}}">Index</a></li>
+            <li class="active"><a href="{{url_for('display')}}">Display</a></li>
+            <li><a href="{{url_for('update')}}">Update</a></li>
+            <li><a href="{{url_for('logout')}}">Log out</a></li>
+        </ul>
+    </div>
+    <div class="content" align="center">
+        <div class="topbar">
+            <h2>Welcome!! You are in Display Page!! </h2>
+        </div>
+        </br>
+        <div class="contentbar">
+            <h1>Your Details</h1> </br>
+            {% block content %}
+            <div class="border">
+                <table class="worddark"></br></br></br></br>
+                    <tr>
+                        <td>Username:</td>
+                        <td>{{ account['username'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>{{ account['password'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email ID:</td>
+                        <td>{{ account['email'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Organisation:</td>
+                        <td>{{ account['organisation'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>{{ account['address'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td>{{ account['city'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{{ account['state'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>{{ account['country'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Postal code:</td>
+                        <td>{{ account['postalcode'] }}</td>
+                    </tr>
+                </table>
+            </div>
+            {% endblock %}
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

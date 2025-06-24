@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> register </title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div class="registercontent" align="center">
+    <div class="registertop">
+        <h1>Register</h1>
+    </div>
+    </br></br>
+    <div class="registerbottom">
+        <form action="{{ url_for('register')}}" method="post" autocomplete="off">
+            <div class="msg">{{ msg }}</div>
+            <input type="text" name="username" placeholder="Enter Your Username"
+                   class="textbox" id="username" required></br></br>
+            <input type="password" name="password" placeholder="Enter your Password"
+                   class="textbox" id="password" required></br></br>
+            <input type="email" name="email" placeholder="Enter Your Email ID"
+                   class="textbox" id="email" required></br></br>
+            <input type="text" name="address" placeholder="Enter your Address"
+                   class="textbox" id="address" required></br></br>
+            <input type="text" name="city" placeholder="Enter Your City"
+                   class="textbox" id="city" required></br></br>
+            <input type="text" name="state" placeholder="Enter Your State"
+                   class="textbox" id="state" required></br></br>
+            <input type="text" name="country" placeholder="Enter Your Country"
+                   class="textbox" id="country" required></br></br>
+            <input type="text" name="postalcode" placeholder="Enter Your Postal Code"
+                   class="textbox" id="postalcode" required></br></br>
+            <input type="submit" class="btn" value="Register">
+        </form>
+        <p class="Worddark">Already have account? <a class="worddark"
+                                                     href="{{ url_for('login') }}">Login here</a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <title>update</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body bgcolor="#e6ffee">
+<div class="one">
+    <div class="two">
+        <h1>Side Bar</h1>
+        <ul>
+            <li><a href="{{url_for('index')}}">Index</a></li>
+            <li><a href="{{url_for('display')}}">Display</a></li>
+            <li class="active"><a href="{{url_for('update')}}">Update</a></li>
+            <li><a href="{{url_for('logout')}}">Log out</a></li>
+        </ul>
+    </div>
+    <div class="content" align="center">
+        <div class="topbar">
+            <h2>Welcome!! You are in Update Page!! </h2>
+        </div>
+        </br></br>
+        <div class="contentbar">
+            <h1>Fill Your Details to Update</h1></br>
+            <form action="{{ url_for('update') }}" method="post" autocomplete="off">
+                <div class="msg">{{ msg }}</div>
+                <input type="text" name="username" placeholder="Enter Your Username" class="textbox" id="username"
+                       required></br></br>
+                <input type="password" name="password" placeholder="Enter Your Password" class="textbox" id="password"
+                       required></br></br>
+                <input type="email" name="email" placeholder="Enter Your Email ID" class="textbox" id="email"
+                       required></br></br>
+                <input type="text" name="organisation" placeholder="Enter Your Organisation" class="textbox"
+                       id="organisation" required></br></br>
+                <input type="text" name="address" placeholder="Enter Your Address" class="textbox" id="address"
+                       required></br></br>
+                <input type="text" name="city" placeholder="Enter Your City" class="textbox" id="city"
+                       required></br></br>
+                <input type="text" name="state" placeholder="Enter Your State" class="textbox" id="state"
+                       required></br></br>
+                <input type="text" name="country" placeholder="Enter Your Country" class="textbox" id="country"
+                       required></br></br>
+                <input type="text" name="postalcode" placeholder="Enter Your Postal Code" class="textbox"
+                       id="postalcode" required></br></br>
+                <input type="submit" class="btn" value="Update">
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
